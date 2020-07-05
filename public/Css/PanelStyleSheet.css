@@ -1,0 +1,440 @@
+.box {
+    font-family: yekan;
+    margin-bottom: 10px;
+}
+
+.box .header {
+    height: 40px;
+    background: #3c3c3c;
+    color: #fff;
+    padding-right: 10px;
+    font-size: 12pt;
+    line-height: 36px;
+}
+
+.box .content {
+    background: #fff;
+}
+
+.box .content table td {
+    padding: 5px;
+}
+
+.box .content table td .title {
+    font-size: 10.5pt;
+    color: darkblue;
+}
+
+.box .content table td .value {
+    font-size: 10pt;
+}
+
+.box .content table {
+    width: 100%;
+}
+
+.box .content table tr .icon {
+    text-align: left;
+    padding: 5px;
+}
+
+
+#tab {
+    width: 1195px;
+    float: right;
+    margin-top: 20px;
+    background: #f5f6f7;
+    padding: 0px;
+}
+
+#tab li {
+    float: right;
+    padding: 15px;
+    font-size: 12pt;
+    border: 1px solid #eee;
+    font-family: yekan;
+    position: relative;
+    cursor: pointer;
+    padding-right: 37px;
+}
+
+#tab li.active {
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .2);
+    border-top: 2px solid black;
+    color: white;
+    background: black;
+}
+
+#tab li::before {
+    background: url("../image/slices.png") no-repeat;
+    content: " ";
+    width: 30px;
+    height: 26px;
+    display: block;
+    position: absolute;
+    right: 3px;
+    top: 17px;
+}
+
+#tab .naghd::before {
+    background-position: -105px -266px;
+}
+
+#tab .soal::before {
+    background-position: -210px -266px;
+}
+
+#tab .fanni::before {
+    background-position: -315px -266px;
+}
+
+#tab .nazar::before {
+    background-position: -261px -266px;
+}
+
+#tab .naghd.active::before {
+    background-position: -105px -305px;
+}
+
+#tab .soal.active::before {
+    background-position: -210px -306px;
+}
+
+#tab .fanni.active::before {
+    background-position: -315px -309px;
+}
+
+#tab .nazar.active::before {
+    background-position: -261px -307px;
+}
+
+#tabchilds {
+    float: right;
+    background: #fff;
+    width: 1195px;
+}
+
+/*
+#tabchilds section:first-child {
+    display: block;
+}*/
+
+#tabchilds section {
+    font-family: yekan;
+    padding: 10px 10px 20px;
+    display: none;
+    float: right;
+    width: 100%;
+}
+
+#tabchilds section > table {
+    width: 98%;
+}
+
+#tabchilds section > table td {
+    text-align: center;
+    padding: 4px;
+    border-left: 1px solid #ccc;
+    border-bottom: 2px solid #2a2a2a;
+
+}
+
+#tabchilds .myorders > table td:last-child {
+    border-left: none;
+}
+
+#tabchilds section > table tr {
+    background: #eee;
+    color: black;
+    font-size: 10pt;
+    font-family: yekan;
+}
+
+#tabchilds section > table tr:first-child {
+    background: #3c3c3c;
+    color: #fff;
+    font-size: 10.5pt;
+    font-family: yekan;
+}
+
+.orderdetails img {
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+#tabchilds section > table .subtable {
+    background: #fff;
+    box-shadow: 0 0 5px #ccc;
+    padding: 10px;
+}
+
+#tabchilds .myorders > table .subtable > table {
+    width: 100%;
+}
+
+#tabchilds .myorders > table .subtable > table tr {
+    background: white;
+}
+
+#tabchilds .myorders > table .subtable > table tr td {
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+#tabchilds .myorders > table .subtable > table > tbody > tr:first-child {
+    background: #eee;
+    color: black;
+    font-size: 11pt;
+    font-family: yekan;
+}
+
+.subtable p.title {
+    font-family: yekan;
+    font-size: 11pt;
+    background: #ccc;
+    padding: 10px;
+}
+
+.order_steps {
+    padding-top: 60px;
+    padding-left: 80px;
+    padding-right: 133px;
+    height: 100px;
+}
+
+.order_steps .dashed {
+    float: right;
+}
+
+.order_steps .dashed span {
+    width: 10px;
+    height: 2px;
+    background: blue;
+    display: block;
+    margin-left: 3px;
+    float: right;
+}
+
+.order_steps ul li {
+    position: relative;
+    width: 170px;
+    height: 1px;
+    float: right;
+    display: block;
+}
+
+.order_steps ul li .circle {
+    width: 19px;
+    height: 19px;
+    border-radius: 100%;
+    border: 3px solid #ccc;
+    display: block;
+    position: absolute;
+    right: 4px;
+    top: -11px;
+}
+
+.order_steps ul li.active .circle {
+    border: 3px solid #3636c5;
+    background: #6767f7 url("../image/slices.png") no-repeat -810px -476px;
+}
+
+.order_steps ul li .line {
+    width: 128px;
+    height: 2px;
+    background: #ccc;
+    display: block;
+    position: absolute;
+    right: 35px;
+}
+
+.order_steps ul li.active .line {
+    background: #3636c5;
+}
+
+.order_steps ul li .title {
+    font-family: yekan;
+    font-size: 11.7pt;
+    color: #aaa;
+    top: 20px;
+    position: absolute;
+    right: -13px;
+    width: 100px;
+}
+
+.order_steps ul li.active .title {
+    color: #6f6f6f;
+}
+
+.order_steps ul li:last-child {
+    width: 40px;
+}
+
+.myorders .subtable .more {
+    margin-bottom: 10px;
+}
+
+.myorders .subtable .more table {
+    width: 100% !important;
+}
+
+.myorders .subtable .more table tr {
+    background: white !important;
+    color: black !important;
+    font-size: 10pt !important;
+}
+
+.myorders .subtable .more table td {
+    width: 33% !important;
+    border-bottom: 1px solid #ccc !important;
+}
+
+.myorders .subtable .more table tr:last-child td {
+    border-bottom: none !important;
+}
+
+.myorders table .details {
+    display: none;
+}
+
+#tabchilds .favorits ul {
+    width: 96%;
+    padding: 10px;
+    float: right;
+    background: #eee;
+    padding-bottom: 22px;
+    border: 1px dashed #ccc;
+}
+
+#tabchilds .favorits ul li {
+    width: 280px;
+    height: 36px;
+    float: right;
+    padding: 10px;
+}
+
+#tabchilds .favorits ul li a {
+    display: block;
+    height: 100%;
+    position: relative;
+    padding: 5px;
+}
+
+#tabchilds .favorits ul li.active a {
+    background: #fff;
+    border: 1px solid #7a7a7a;
+}
+
+#tabchilds .favorits ul li a:hover {
+    background: #fff;
+    border: 1px solid #7a7a7a;
+}
+
+#tabchilds .favorits ul li a .folder {
+    vertical-align: middle;
+}
+
+#tabchilds .favorits ul li a span {
+    font-size: 10pt;
+    font-family: yekan;
+    margin-right: 7px;
+}
+
+#tabchilds .favorits ul li a .edit {
+    position: absolute;
+    top: 7px;
+    left: 8px;
+    display: none;
+}
+
+.favorits .item {
+    float: right;
+    margin-top: 15px;
+    width: 96.5%;
+    border: 1px dotted #504848;
+    padding: 6px;
+    margin-bottom: 10px;
+}
+
+.favorits .item .right {
+    float: right;
+}
+
+.favorits .item .right img{
+    width: 110px;
+    height: 110px;
+    border: 1px solid #000000;
+    border-radius: 3px;
+}
+
+.favorits .item .left {
+    float: right;
+    margin-right: 25px;
+    width: 1012px;
+}
+
+.favorits .item .left span {
+    font-family: yekan;
+    font-size: 10pt;
+    border-bottom: 1px solid #eee;
+    height: 36px;
+    display: block;
+    line-height: 34px;
+}
+
+.favorits .item .left span img {
+    float: left;
+    padding-left: 9px;
+    padding-top: 9px;
+    cursor: pointer;
+}
+
+.favorits .item .left .description{
+    font-size: 11pt;
+    font-family: yekan;
+}
+
+#tabchilds .digiBon #addDigiBon {
+    padding: 10px;
+    border: 1px dotted #ccc;
+    background: #eeeeee;
+    width: 96%;
+    padding-bottom: 17px;
+    margin-bottom: 10px;
+}
+
+#tabchilds .digiBon #addDigiBon input{
+    width: 270px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+#tabchilds .digiBon #addDigiBon img {
+    position: relative;
+    right: 10px;
+    top: 15px;
+}
+
+#tabchilds .digiBon .sub {
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 5px inset #827676;
+}
+
+#tabchilds .digiBon .sub tr:first-child {
+    background: #eee ;
+}
+
+#tabchilds .digiBon .sub tr{
+    background: white ;
+}
+
+#tabchilds .digiBon .sub table {
+    width: 100%;
+}
+
+#tabchilds .digiBon .sub table tr td {
+    color: black;
+    font-size: 10pt;
+    border-right: 1px solid #ccc;
+}

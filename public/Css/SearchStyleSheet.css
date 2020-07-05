@@ -1,0 +1,547 @@
+#main {
+    width: 1150px;
+    margin: 10px auto;
+    background: #fff;
+    box-shadow: 0 1px 3px #eee;
+    padding: 25px;
+}
+
+#main #sidebar {
+    width: 250px;
+    border: 1px solid #ccc;
+    float: right;
+}
+
+#main #content {
+    width: 860px;
+    float: left;
+    margin-left: 30px;
+}
+
+#main::after {
+    content: " ";
+    clear: both;
+    display: block;
+}
+
+#sidebar h3 {
+    background: #777780;
+    height: 30px;
+    padding-right: 5px;
+    padding-top: 5px;
+    margin: 0;
+    color: #fff;
+    font-size: 12pt;
+    font-family: yekan;
+    cursor: pointer;
+    line-height: 25px;
+
+}
+
+#sidebar h3 .arrow {
+    background: rgba(0, 0, 0, 0) url("../image/sideArrow.gif") no-repeat scroll 0 0;
+    display: block;
+    float: left;
+    height: 11px;
+    margin-left: 8px;
+    margin-top: 8px;
+    width: 20px;
+}
+
+#sidebar ul {
+    padding-right: 20px;
+    font-family: yekan;
+    font-size: 10pt;
+}
+
+#Search_category_item {
+    cursor: pointer;
+}
+
+#sidebar .li_arrow {
+    width: 8px;
+    height: 6px;
+    display: block;
+    background: url("../image/slices.png") no-repeat -36px -543px;
+    float: right;
+    margin-left: 8px;
+    margin-top: 8px;
+}
+
+.filter_ul {
+    padding-right: 5px;
+}
+
+.filter_ul li {
+    font-family: yekan;
+    font-size: 10pt;
+    position: relative;
+}
+
+.filter_ul .title {
+    font-size: 11pt;
+
+}
+
+#sidebar .check_label {
+    width: 17px !important;
+    height: 17px;
+    display: block;
+    background: url("../image/a-checkbox-medium-sprite.png") no-repeat -1px -1px;
+    right: 3px;
+    top: 7px;
+    position: absolute;
+    border-radius: 1px;
+}
+
+#sidebar .check_label.checked {
+    background: url("../image/a-checkbox-medium-sprite.png") no-repeat -1px -32px;
+    border: none;
+}
+
+#sidebar .check_input {
+    position: relative;
+    opacity: 0;
+    z-index: 2;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 6px;
+    top: 2px;
+}
+
+.filter_ul .product_color {
+    width: 4px;
+    height: 12px;
+    display: inline-block;
+    position: relative;
+    top: 4px;
+    margin-left: 4px;
+}
+
+.page_navigator li {
+    font-family: yekan;
+    font-size: 9pt;
+    float: right;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.page_navigator {
+    padding: 0px;
+    float: right;
+    width: 100%;
+}
+
+.filter_top {
+    padding: 0px;
+    float: right;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.filter_top > li {
+    font-family: yekan;
+    font-size: 9.5pt;
+    width: 140px;
+    height: 24px;
+    float: right;
+    background: #eee;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding-right: 3px;
+    margin-left: 10px;
+
+}
+
+.filter_top li img {
+    float: left;
+    margin-top: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+
+}
+
+.filter_top li .options {
+    width: 155px;
+    height: 205px;
+    box-shadow: -4px 4px 3px rgba(0, 0, 0, .2);
+    border-right: 1px solid #eee;
+    position: absolute;
+    right: -1px;
+    top: 24px;
+    background: #fff;
+    line-height: 22px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: none;
+    z-index: 2;
+}
+
+.filter_top li {
+    position: relative;
+    cursor: pointer;
+
+}
+
+.filter_top li .options li {
+    font-size: 9.6pt;
+    font-family: yekan;
+    padding-right: 12px;
+    cursor: pointer;
+}
+
+.options ul {
+    padding-right: 0px;
+    padding-top: 10px;
+}
+
+.horizental_row {
+    background: #ccc;
+    float: right;
+    height: 1px;
+    margin: 15px;
+    width: 86%;
+}
+
+.filter_top .options .square {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background: url("../image/spritefiltercontrols.png") no-repeat -58px -154px;
+    position: relative;
+    top: 2px;
+    margin-left: 3px;
+    cursor: pointer;
+}
+
+.square_hover {
+    background: url("../image/spritefiltercontrols.png") no-repeat -58px -205px !important;
+}
+
+.square_selected {
+
+    background: url("../image/spritefiltercontrols.png") no-repeat -58px -256px !important;
+}
+
+#filters_selected {
+    width: 100%;
+}
+
+#filters_selected i {
+    width: 9px;
+    height: 14px;
+    background: url("../image/spritefiltercontrols.png") no-repeat -58px -382px !important;
+    display: inline-block;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: 5px;
+    cursor: pointer;
+    position: relative;
+    top: 5px;
+}
+
+.filters_selected_span {
+    background: #eee;
+    font-family: yekan;
+    font-size: 9.5pt;
+    margin-left: 10px;
+    border-radius: 2px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .15);
+}
+
+#search {
+    width: 100%;
+    float: right;
+    position: relative;
+}
+
+#search input {
+    width: 330px;
+    height: 18px;
+    border: 1px solid #eee;
+}
+
+#search img {
+    position: absolute;
+    right: 313px;
+    top: 13px;
+    cursor: pointer;
+}
+
+#search .exist {
+
+    position: relative;
+    margin-right: 37px;
+
+    top: 6px;
+
+}
+
+#search .exist_back {
+    background: url("../image/btnchecked.png") no-repeat 0 0;
+
+    display: inline-block;
+    width: 40px;
+    height: 21px;
+}
+
+#search .exist.active .exist_back {
+    background-position: -40px 0 !important;
+}
+
+#search .exist.active .exist_yesno {
+    background-position: 0 0 !important;
+}
+
+#search .exist_yesno {
+    background: url(../image/yesno.png) no-repeat 0 -21px;
+    width: 31px;
+    height: 22px;
+    position: absolute;
+    right: 9px;
+    top: -7px;
+    cursor: pointer;
+}
+
+#search p {
+    display: inline-block;
+    font-family: yekan;
+    font-size: 9.5pt;
+    margin-right: 12px;
+}
+
+.display_type p {
+    float: left;
+    top: -12px;
+    position: relative;
+    left: 14px;
+}
+
+.display_type .type1, .type2 {
+    background: url("../image/displaytype.png") no-repeat;
+    display: block;
+    float: left;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.display_type .type1 {
+    background-position: -24px -24px;
+}
+
+#sort {
+    float: right;
+    width: 100%;
+
+}
+
+#sort p {
+    display: inline-block;
+}
+
+#pagination {
+    float: right;
+    width: 100%;
+}
+
+#pagination ul {
+    padding: 0;
+    float: left;
+
+}
+
+#pagination ul li {
+    float: right;
+    font-size: 9.3pt;
+    font-family: yekan;
+    cursor: pointer;
+    background: linear-gradient(-90deg, rgba(255, 255, 255, 1) 0%, rgba(239, 239, 239, 1) 100%);
+    background: -moz-linear-gradient(-90deg, rgba(255, 255, 255, 1) 0%, rgba(239, 239, 239, 1) 100%);
+    background: -webkit-linear-gradient(-90deg, rgba(255, 255, 255, 1) 0%, rgba(239, 239, 239, 1) 100%);
+    width: 25px;
+    height: 20px;
+    border-radius: 4px;
+    border: 2px solid #eee;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+    text-align: center;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+#pagination .prev {
+    font-family: yekan;
+    font-size: 9.3pt;
+    float: left;
+    width: 60px;
+    height: 20px;
+    border-radius: 4px;
+    border: 2px solid #eee;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+    text-align: center;
+    cursor: pointer;
+    background: linear-gradient(-90deg, rgba(255, 255, 255, 1) 0%, rgba(239, 239, 239, 1) 100%);
+    background: -moz-linear-gradient(-90deg, rgba(255, 255, 255, 1) 0%, rgba(239, 239, 239, 1) 100%);
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(239, 239, 239, 1) 100%);
+
+}
+
+#pagination .next {
+    font-family: yekan;
+    font-size: 9.3pt;
+    float: left;
+    width: 60px;
+    height: 20px;
+    border-radius: 4px;
+    border: 2px solid #eee;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+    text-align: center;
+    cursor: pointer;
+    background: linear-gradient(-90deg, rgba(255, 255, 255, 1) 0%, rgba(239, 239, 239, 1) 100%);
+    background: -moz-linear-gradient(-90deg, rgba(255, 255, 255, 1) 0%, rgba(239, 239, 239, 1) 100%);
+    background: -webkit-linear-gradient(-90deg, rgba(255, 255, 255, 1) 0%, rgba(239, 239, 239, 1) 100%);
+}
+
+#products {
+    float: right;
+    margin-top: 30px;
+    width: 100%;
+}
+
+#products ul {
+    padding: 0;
+    width: 100%;
+}
+
+#products ul li {
+    width: 208px;
+    height: 300px;
+    border: 1px solid #eee;
+    float: right;
+    margin-right: 10px;
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+
+#products ul li a {
+    display: block;
+    width: 100%;
+
+}
+
+.text_center {
+    text-align: center;
+}
+
+.colors .color {
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+    border: 1px solid #eee;
+}
+
+#products .product_img {
+    margin-top: 5px;
+}
+
+.gray {
+    height: 9px;
+    background: url("../image/stars.png") repeat;
+    background-position: 0 -9px;
+    width: 55px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.red {
+    height: 9px;
+    background: url("../image/stars.png") repeat;
+    background-position: 0 0px;
+    width: 52%;
+    margin: 0 auto;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+#products .title {
+    font-family: yekan;
+    font-size: 10pt;
+    padding:0 6px;
+    text-align: left;
+}
+
+#products .price{
+   position: relative;
+}
+
+.price_green {
+    font-size: 10.5pt;
+    font-family: yekan;
+    color: green;
+    margin: 0;
+}
+
+.price_red {
+    color: red;
+    text-decoration: line-through;
+    font-size: 9pt;
+    font-family: yekan;
+    margin: 0;
+}
+
+#products .price {
+    padding: 0 4px;
+}
+
+#products .addtocart{
+    display: block;
+    width: 30px;
+    height: 30px;
+    top: 8px;
+    left: 7px;
+    background: url("../image/addtocart-min.png") no-repeat;
+position: absolute;
+}
+
+#products .description{
+    height: 208px;
+    display: none;
+    font-size: 10pt;
+    font-family: yekan;
+}
+
+.display1 li{
+    width: 100% !important;
+
+}
+
+.display1 .right{
+    float: right;
+    width: 217px;
+}
+
+.display1 .left{
+    float: left;
+    width: 660px;
+}
+
+.display1 .title{
+    text-align: right !important;
+    font-size: 14pt !important;
+}
+
+.display1 .description{
+
+    display: block !important;
+}
+
+.type1.active{
+    background-position: -24px 0px ;
+}
+
+.type2.active{
+    background-position: 0px -24px ;
+}

@@ -1,0 +1,138 @@
+#mainRegister {
+    width: 1200px;
+    margin: 10px auto;
+    height: 500px;
+    background: #FFF;
+    box-shadow: 0 1px 3px #eee;
+
+}
+
+.header {
+    height: 160px;
+    background: #fafcfc;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.header i {
+    width: 70px;
+    height: 52px;
+    background: url("../image/slices.png") no-repeat;
+    background-position: -870px -89px;
+    display: block;
+    margin: auto;
+
+}
+
+.header h2 {
+    font-family: yekan;
+    font-size: 14pt;
+    text-align: center;
+}
+
+.header .right, .header .left {
+    width: 50%;
+    float: right;
+}
+
+.header .left {
+    width: 40%;
+    padding-top: 75px;
+    line-height: 52px;
+    padding-right: 40px;
+
+}
+
+.header .right {
+    padding-top: 60px;
+    padding-right: 40px;
+}
+
+.header .right .right_textbox input {
+    width: 250px;
+    height: 30px;
+    border: 1px solid #eee;
+}
+
+.header label {
+    font-family: yekan;
+    font-size: 11pt;
+    display: inline-block;
+    width: 150px;
+}
+
+.header .right > div {
+    margin-top: 25px;
+    font-family: yekan;
+    font-size: 10pt;
+}
+
+.header .right .btn {
+    width: 110px;
+    height: 33px;
+    background: #208de6;
+    display: block;
+    float: left;
+    margin-left: 49px;
+    margin-top: 3px;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, .2);
+    color: #FFFFFF;
+    text-align: center;
+    font-family: yekan;
+    line-height: 30px;
+    font-size: 10pt;
+    cursor: pointer;
+}
+
+.header .left ul {
+    padding: 0;
+
+}
+
+.header .left li {
+    font-family: yekan;
+    font-size: 12pt;
+}
+
+.header .left li i {
+    display: inline-block;
+    width: 27px;
+    height: 27px;
+    background: url("../image/slices.png");
+    position: relative;
+    top: 8px;
+    margin-left: 11px;
+}
+
+.check_div {
+    position: relative;
+}
+
+.check_label {
+    width: 14px !important;
+    height: 14px;
+    display: block;
+
+    right: 3px;
+    top: 3px;
+    position: absolute;
+    border: 1px solid #eee;
+    border-radius: 1px;
+}
+
+.check_label.checked {
+    background: url("../image/slices.png") #595ce1 no-repeat -193px -83px;
+    border: none;
+}
+
+.check_input {
+    position: relative;
+    opacity: 0;
+    z-index: 2;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 20px;
+    top: 2px;
+}

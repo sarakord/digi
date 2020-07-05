@@ -1,0 +1,375 @@
+#main {
+    background: white;
+}
+
+.order_steps {
+    padding-top: 60px;
+    padding-left: 80px;
+    padding-right: 186px;
+    height: 100px;
+    background-color: #e7efeb;
+}
+
+.order_steps .dashed {
+    float: right;
+}
+
+.order_steps .dashed span {
+    width: 10px;
+    height: 2px;
+    background: blue;
+    display: block;
+    margin-left: 3px;
+    float: right;
+}
+
+.order_steps ul li {
+    position: relative;
+    width: 220px;
+    height: 1px;
+    float: right;
+    display: block;
+}
+
+.order_steps ul li .circle {
+    width: 19px;
+    height: 19px;
+    border-radius: 100%;
+    border: 3px solid #ccc;
+    display: block;
+    position: absolute;
+    right: 4px;
+    top: -11px;
+}
+
+.order_steps ul li.active .circle {
+    border: 3px solid #3636c5;
+    background: #6767f7 url("../image/slices.png") no-repeat -810px -476px;
+}
+
+.order_steps ul li .line {
+    width: 182px;
+    height: 2px;
+    background: #ccc;
+    display: block;
+    position: absolute;
+    right: 35px;
+}
+
+.order_steps ul li.active .line {
+    background: #3636c5;
+}
+
+.order_steps ul li .title {
+    font-family: yekan;
+    font-size: 11.7pt;
+    color: #aaa;
+    top: 20px;
+    position: absolute;
+    right: -27px;
+    width: 143px;
+}
+
+.order_steps ul li.active .title {
+    color: #6f6f6f;
+}
+
+.order_steps ul li:last-child {
+    width: 40px;
+}
+
+.btn-gray {
+    width: 134px;
+    height: 36px;
+    display: block;
+    border-radius: 4px;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 13px;
+    margin-left: 11px;
+    cursor: pointer;
+    background: #7c7c7c;
+    line-height: 29px;
+    float: left;
+}
+
+.head {
+    margin-top: 40px;
+    font-family: yekan;
+    float: right;
+    width: 100%;
+}
+
+.head h4 {
+    font-size: 12pt;
+    font-weight: normal;
+    float: right;
+    padding-right: 20px;
+}
+
+#main::after {
+    content: " ";
+    clear: both;
+    display: block;
+}
+
+.content {
+    width: 100%;
+    font-family: yekan;
+}
+
+.content table {
+    width: 100%;
+    float: right;
+    margin: 20px 0;
+    font-size: 10pt;
+    padding: 0 15px;
+    font-weight: bold;
+    color: #71716a;
+}
+
+table tr td {
+    border-bottom: 1px solid #bfb9b9;
+    border-right: 1px solid #bfb9b9;
+    border-left: 1px solid #bfb9b9;
+    padding: 5px;
+}
+
+table .circle {
+    width: 17px;
+    height: 17px;
+    border: 1px solid #ccc;
+    border-radius: 100px;
+    display: block;
+    margin: auto;
+}
+
+.content table .edit i {
+    background: url("../image/slices.png") no-repeat -812px -446px;
+    display: block;
+    width: 19px;
+    height: 19px;
+    margin-right: 13px;
+}
+
+.content table .edit {
+    background: #d6deea !important;
+}
+
+.content table .remove i {
+    background: url("../image/slices.png") no-repeat -812px -505px;
+    display: block;
+    width: 19px;
+    height: 19px;
+    margin-right: 13px;
+}
+
+.content table .remove {
+    background: #f1ccdb !important;
+}
+
+table.active .circle {
+    background: #4040c3;
+    border: none;
+    position: relative;
+}
+
+.content table.active .triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 42px 42px 0;
+    border-color: transparent #39ad1c transparent transparent;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.content table.active .triangle i {
+    background: url('../image/slices.png') no-repeat -811px -475px;
+    display: block;
+    width: 15px;
+    height: 15px;
+    position: relative;
+    left: 36px;
+    top: 3px;
+}
+
+table.active .circle::before {
+    content: " ";
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    position: absolute;
+    background: white;
+    top: 6px;
+    right: 6px;
+}
+
+table.active tr:first-child td:first-child {
+    background: #e0e8e0;
+}
+
+.send_type {
+    width: 100%;
+}
+
+.send_type table {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0 15px;
+    font-weight: bold;
+    font-size: 10pt;
+    color: #71716a;
+    font-family: yekan;
+}
+
+.send_type table tr td {
+    border-top: 1px solid #bfb9b9;
+}
+
+.send_type table tr td img {
+    float: right;
+    margin-top: 17px;
+    margin-right: 10px;
+}
+
+.send_type table tr td div {
+    float: right;
+    padding-right: 18px;
+}
+
+.send_type table tr td p {
+    text-align: center;
+    font-size: 11pt;
+}
+
+.send_type table.active tr td:last-child {
+    background: #ebf3eb;
+}
+
+
+#add_address {
+    width: 700px;
+    height: 640px;
+    background: #fff;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 8px;
+    margin: auto;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .15);
+    z-index: 6;
+    display: none;
+    font-family: yekan;
+}
+
+#dark {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, .3);
+    left: 0;
+    top: 0;
+    z-index: 2;
+    display: none;
+}
+
+#add_address h4 {
+    background: #eee;
+    margin: 0;
+    padding: 8px;
+    font-size: 12pt;
+    position: relative;
+}
+
+#add_address h4 .close {
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    cursor: pointer;
+    left: 6px;
+    top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 100%;
+    background: url("../image/slices.png") no-repeat -134px -123px;
+}
+
+#add_address .row {
+    float: right;
+    width: 95%;
+    padding: 12px 19px;
+}
+
+#add_address .row .right {
+    float: right;
+    width: 225px;
+    margin-right: 40px;
+}
+
+#add_address .row .left {
+    float: right;
+}
+
+#add_address .row .right span {
+    font-size: 10pt;
+    margin-top: 7px;
+    display: block;
+}
+
+#add_address .row .left input {
+    width: 260px;
+    height: 28px;
+    margin-right: 15px;
+    border: 1px solid #e0dbdb;
+}
+
+#add_address .row .left textarea {
+    width: 260px;
+    height: 150px;
+    margin-right: 15px;
+    border: 1px solid #e0dbdb;
+}
+
+#add_address .row .btn-green{
+    width: 180px;
+    height: 45px;
+    display: block;
+    border-radius: 4px;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 13px;
+    margin-left: 11px;
+    cursor: pointer;
+    background: green;
+    line-height: 40px;
+    float: left;
+    color: white;
+}
+
+.save{
+    width: 100%;
+    float: right;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: yekan;
+}
+
+.save span{
+    width: 180px;
+    height: 45px;
+    display: block;
+    border-radius: 4px;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 13px;
+    margin-left: 16px;
+    cursor: pointer;
+    background: green;
+    line-height: 40px;
+    float: left;
+    color: white;
+}

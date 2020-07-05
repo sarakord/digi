@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3d image</title>
+    <script src="jsc3d.js"></script>
+    <script src="jsc3d.touch.js"></script>
+    <script src="jsc3d.webgl.js"></script>
+</head>
+<body>
+
+
+<canvas id="cv" width="420" height="320"></canvas>
+
+<script>
+    var canvasTag = document.getElementById('cv');
+    var viewer = new JSC3D.Viewer(canvasTag, {
+        SceneUrl:'bmw/bmw.obj',
+        InitRotationX:-100,
+        InitRotationY:-100,
+        InitRotationZ:0,
+        RenderMode:'texturesmooth'
+    });
+    viewer.init();
+    viewer.update();
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,150 @@
+#main {
+    background: white;
+}
+
+.order_steps {
+    padding-top: 60px;
+    padding-left: 80px;
+    padding-right: 186px;
+    height: 100px;
+    background-color: #e7efeb;
+}
+
+.order_steps .dashed {
+    float: right;
+}
+
+.order_steps .dashed span {
+    width: 10px;
+    height: 2px;
+    background: blue;
+    display: block;
+    margin-left: 3px;
+    float: right;
+}
+
+.order_steps ul li {
+    position: relative;
+    width: 220px;
+    height: 1px;
+    float: right;
+    display: block;
+}
+
+.order_steps ul li .circle {
+    width: 19px;
+    height: 19px;
+    border-radius: 100%;
+    border: 3px solid #ccc;
+    display: block;
+    position: absolute;
+    right: 4px;
+    top: -11px;
+}
+
+.order_steps ul li.active .circle {
+    border: 3px solid #3636c5;
+    background: #6767f7 url("../image/slices.png") no-repeat -810px -476px;
+}
+
+.order_steps ul li .line {
+    width: 182px;
+    height: 2px;
+    background: #ccc;
+    display: block;
+    position: absolute;
+    right: 35px;
+}
+
+.order_steps ul li.active .line {
+    background: #3636c5;
+}
+
+.order_steps ul li .title {
+    font-family: yekan;
+    font-size: 11.7pt;
+    color: #aaa;
+    top: 20px;
+    position: absolute;
+    right: -27px;
+    width: 143px;
+}
+
+.order_steps ul li.active .title {
+    color: #6f6f6f;
+}
+
+.order_steps ul li:last-child {
+    width: 40px;
+}
+
+.content {
+    margin-top: 50px;
+    font-family: yekan;
+    /*margin-bottom: 20px;*/
+}
+
+.content .right {
+    width: 540px;
+    float: right;
+}
+
+.content .left {
+    width: 540px;
+    float: right;
+    margin-right: 20px;
+}
+
+.content .right i {
+    width: 48px;
+    height: 54px;
+    display: block;
+    margin: auto;
+    background: url("../image/slices.png") no-repeat -795px -20px;
+}
+
+.content .left i {
+    width: 48px;
+    height: 54px;
+    display: block;
+    margin: auto;
+    background: url("../image/slices.png") no-repeat -795px -90px;
+}
+
+#main::after {
+    content: " ";
+    clear: both;
+    display: block;
+}
+
+.content p{
+    text-align: center;
+}
+
+.btn_green {
+    width: 170px;
+    height: 37px;
+    display: block;
+    border-radius: 4px;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 13px;
+    margin: auto;
+    cursor: pointer;
+    background: #5aa75a;
+    line-height: 34px;
+}
+
+.btn_blue {
+    width: 170px;
+    height: 37px;
+    display: block;
+    border-radius: 4px;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 13px;
+    margin: auto;
+    cursor: pointer;
+    background: #2f67ff;
+    line-height: 34px;
+}

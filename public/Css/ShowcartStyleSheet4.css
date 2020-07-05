@@ -1,0 +1,255 @@
+#main {
+    background: white;
+}
+
+#main .discount, .gift , .payment{
+    float: right;
+    width: 100%;
+}
+
+.gift{
+    margin-top: 70px;
+}
+
+#main .discount h4, .gift h4 , .payment h4 {
+    font-family: yekan;
+    font-size: 13pt;
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.btn-blue {
+    width: 155px;
+    height: 36px;
+    display: block;
+    border-radius: 4px;
+    text-align: center;
+    overflow: hidden;
+    margin-left: 38px;
+    cursor: pointer;
+    background: #175ba7;
+    line-height: 29px;
+    font-family: yekan;
+    color: white;
+}
+
+.content .discount_code, .gift_code {
+    width: 98.5%;
+    font-family: yekan;
+    margin-right: 9px;
+    padding: 3px;
+    border: 1px solid #dcdbdb;
+}
+
+.content .discount_code td, .gift_code td {
+    padding: 3px;
+}
+
+.content .discount_code input , .gift_code input {
+    height: 33px;
+    width: 225px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.content .discount_code p , .gift_code p {
+    margin-right: 5px;
+}
+
+.content .final_price{
+    width: 98.5%;
+    margin-right: 9px;
+    font-family: yekan;
+    font-size: 12pt;
+    font-weight: bold;
+    color: #459247;
+    padding: 3px;
+    margin-top: 50px;
+    background: #ddfed8;
+    border: 1px solid #dcdbdb;
+}
+
+.content .final_price p{
+    float: right;
+}
+
+#main .payment {
+    margin-top: 70px;
+}
+
+.pardakht_type{
+    width: 98.5%;
+    font-family: yekan;
+    font-size: 11pt;
+    margin-right: 9px;
+    padding: 3px;
+    color: #4e4b4b;
+}
+
+.circle.active  {
+    background: #4040c3;
+    border: none;
+    position: relative;
+}
+
+.circle.active tr:first-child td:first-child {
+    background: #e0e8e0;
+}
+
+.circle.active::before {
+    content: " ";
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    position: absolute;
+    background: white;
+    top: 6px;
+    right: 6px;
+}
+
+.pardakht_type tr td {
+    border-bottom: 1px solid #dcdbdb;
+    border-right: 1px solid #dcdbdb;
+    border-left: 1px solid #dcdbdb;
+    padding: 5px;
+}
+
+.pardakht_type .circle {
+    width: 17px;
+    height: 17px;
+    border: 1px solid #ccc;
+    border-radius: 100px;
+    display: block;
+    margin: auto;
+}
+
+#main::after {
+    content: " ";
+    clear: both;
+    display: block;
+}
+
+#main .back_send {
+    float: left;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#main .send span {
+    float: left;
+}
+
+.btn_gray{
+    width: 155px;
+    height: 36px;
+    display: block;
+    float: right;
+    border-radius: 4px;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 13px;
+    margin-right: 11px;
+    padding-top: 5px;
+    cursor: pointer;
+    background: #8e968e;
+    line-height: 29px;
+    font-family: yekan;
+    color: white;
+}
+
+.btn_green {
+    width: 155px;
+    height: 36px;
+    display: block;
+    float: left;
+    border-radius: 4px;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 13px;
+    margin-left: 11px;
+    padding-top: 5px;
+    cursor: pointer;
+    background: #5aa75a;
+    line-height: 29px;
+    font-family: yekan;
+    color: white;
+}
+
+.order_steps {
+    padding-top: 60px;
+    padding-left: 80px;
+    padding-right: 186px;
+    height: 100px;
+    background-color: #e7efeb;
+}
+
+.order_steps .dashed {
+    float: right;
+}
+
+.order_steps .dashed span {
+    width: 10px;
+    height: 2px;
+    background: blue;
+    display: block;
+    margin-left: 3px;
+    float: right;
+}
+
+.order_steps ul li {
+    position: relative;
+    width: 220px;
+    height: 1px;
+    float: right;
+    display: block;
+}
+
+.order_steps ul li .circle {
+    width: 19px;
+    height: 19px;
+    border-radius: 100%;
+    border: 3px solid #ccc;
+    display: block;
+    position: absolute;
+    right: 4px;
+    top: -11px;
+}
+
+.order_steps ul li.active .circle {
+    border: 3px solid #3636c5;
+    background: #6767f7 url("../image/slices.png") no-repeat -810px -476px;
+}
+
+.order_steps ul li .line {
+    width: 182px;
+    height: 2px;
+    background: #ccc;
+    display: block;
+    position: absolute;
+    right: 35px;
+}
+
+.order_steps ul li.active .line {
+    background: #3636c5;
+}
+
+.order_steps ul li .title {
+    font-family: yekan;
+    font-size: 11.7pt;
+    color: #aaa;
+    top: 20px;
+    position: absolute;
+    right: -27px;
+    width: 143px;
+}
+
+.order_steps ul li.active .title {
+    color: #6f6f6f;
+}
+
+.order_steps ul li:last-child {
+    width: 40px;
+}

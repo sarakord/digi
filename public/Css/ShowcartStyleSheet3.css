@@ -1,0 +1,334 @@
+#main {
+    background: white;
+}
+
+#main .head{
+    float: right;
+    width: 100%;
+}
+
+#main .head h4 {
+    font-family: yekan;
+    font-size: 13pt;
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.btn_green {
+    width: 155px;
+    height: 36px;
+    display: block;
+    border-radius: 4px;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 13px;
+    margin-left: 11px;
+    cursor: pointer;
+    background: #5aa75a;
+    line-height: 29px;
+    font-family: yekan;
+    color: white;
+}
+
+#main .head .btn_green {
+    float: left;
+}
+
+.content table {
+    width: 99.5%;
+    font-family: yekan;
+    font-size: 11pt;
+    margin-right: 3px;
+    padding: 3px;
+}
+
+.content table tr td:not(:first-child) {
+    text-align: center;
+}
+
+.content table tr:first-child {
+    background: #f7f9fa;
+    text-align: center;
+}
+
+.content table td {
+    padding-right: 10px;
+}
+
+.content table .right {
+    float: right;
+}
+
+.content table .left {
+    float: right;
+    margin-right: 8px;
+}
+
+.content table td {
+    border-left: 1px solid #dcdbdb;
+    border-bottom: 1px solid #dcdbdb;
+    padding: 3px;
+}
+
+.content table tr td:first-child {
+    border-right: 1px solid #dcdbdb;
+}
+
+
+.selectlist {
+    width: 50px;
+    height: 31px;
+    border: 1px solid #ccc;
+    background: #eee;
+    position: relative;
+    cursor: pointer;
+    margin: auto;
+}
+
+.selectlist::after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    width: 22px;
+    height: 17px;
+    background: url(../image/slices.png) no-repeat -31px -461px;
+    top: 13px;
+    left: 3px;
+}
+
+.selectlist span {
+    text-align: center;
+    display: block;
+    line-height: 36px;
+    font-family: yekan;
+    font-size: 9.7pt;
+    cursor: pointer;
+    margin-right: -30px;
+}
+
+.selectlist ul {
+    padding: 0;
+    box-shadow: 0 2px 2px #cacaca;
+    display: none;
+    background: #fff;
+}
+
+.selectlist ul li {
+    font-family: yekan;
+    font-size: 10pt;
+    padding: 2px 5px;
+    cursor: pointer;
+}
+
+.selectlist ul li:hover {
+    background: #f9f9ff;
+}
+
+.content table .price {
+    font-size: 13pt;
+}
+
+.content table .tuman {
+    font-size: 10pt;
+    font-family: yekan;
+}
+
+.content table .remove_td {
+    background: #d28a86;
+}
+
+.content table .remove_icon {
+    background: url("../image/slices.png") no-repeat -813px -510px;
+    margin: auto;
+    width: 15px;
+    height: 15px;
+    display: block;
+}
+
+#main .final_price {
+    border: 1px solid yellowgreen;
+    float: left;
+    width: 660px;
+    margin-top: 50px;
+    margin-left: 10px;
+    margin-bottom: 50px;
+    font-family: yekan;
+    padding: 5px;
+}
+
+#main .final_price .total_price , .discount_price , .send_price{
+    width: 99%;
+    float: left;
+    padding: 6px 2px;
+    border-bottom: 1px solid yellowgreen;
+}
+
+#main .final_price .total_price .total_price1 , .send_price1 , .discount_price1{
+    float: right;
+    margin-right: 7px;
+}
+
+#main .final_price .total_price .total_price2 {
+    float: right;
+    font-size: 13pt;
+    margin-right: 340px;
+}
+
+#main .final_price .total_price .total_price3 , .send_price3 , .discount_price3{
+    float: left;
+    margin-left: 85px;
+    margin-top: 22px;
+    font-size: 9pt;
+}
+
+#main .final_price .send_price .send_price2 {
+    float: right;
+    font-size: 13pt;
+    margin-right: 260px;
+}
+
+#main .final_price .discount_price .discount_price2 {
+    float: right;
+    font-size: 13pt;
+    margin-right: 357px;
+}
+
+#main .final_price .pardakht_price{
+    color: green;
+}
+
+#main .final_price .pardakht_price .total_price1 {
+    float: right;
+    line-height: 42px;
+    margin-right: 7px;
+}
+
+#main .final_price .pardakht_price .total_price2 {
+    float: right;
+    font-size: 16pt;
+    font-weight: bold;
+    margin-right: 337px;
+}
+
+#main .final_price .pardakht_price .total_price3 {
+    float: left;
+    margin-left: 85px;
+    margin-top: 27px;
+    font-size: 9pt;
+}
+
+
+#main::after {
+    content: " ";
+    clear: both;
+    display: block;
+}
+
+#main .send{
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#main .send span{
+    float: left;
+}
+
+#main .review_send_info{
+    width: 100%;
+    float: right;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+#main .review_send_info tr td{
+    border: 1px solid #dcdbdb;
+    padding: 9px;
+    font-family: yekan;
+    font-size: 11pt;
+    color: #7d7070;
+}
+
+#main .review_send_info tr td i{
+    display: block;
+    width: 29px;
+    height: 29px;
+    margin: auto;
+    background: url("../image/slices.png")no-repeat;
+}
+
+.order_steps {
+    padding-top: 60px;
+    padding-left: 80px;
+    padding-right: 186px;
+    height: 100px;
+    background-color: #e7efeb;
+}
+
+.order_steps .dashed {
+    float: right;
+}
+
+.order_steps .dashed span {
+    width: 10px;
+    height: 2px;
+    background: blue;
+    display: block;
+    margin-left: 3px;
+    float: right;
+}
+
+.order_steps ul li {
+    position: relative;
+    width: 220px;
+    height: 1px;
+    float: right;
+    display: block;
+}
+
+.order_steps ul li .circle {
+    width: 19px;
+    height: 19px;
+    border-radius: 100%;
+    border: 3px solid #ccc;
+    display: block;
+    position: absolute;
+    right: 4px;
+    top: -11px;
+}
+
+.order_steps ul li.active .circle {
+    border: 3px solid #3636c5;
+    background: #6767f7 url("../image/slices.png") no-repeat -810px -476px;
+}
+
+.order_steps ul li .line {
+    width: 182px;
+    height: 2px;
+    background: #ccc;
+    display: block;
+    position: absolute;
+    right: 35px;
+}
+
+.order_steps ul li.active .line {
+    background: #3636c5;
+}
+
+.order_steps ul li .title {
+    font-family: yekan;
+    font-size: 11.7pt;
+    color: #aaa;
+    top: 20px;
+    position: absolute;
+    right: -27px;
+    width: 143px;
+}
+
+.order_steps ul li.active .title {
+    color: #6f6f6f;
+}
+
+.order_steps ul li:last-child {
+    width: 40px;
+}
