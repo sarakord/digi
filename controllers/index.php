@@ -12,10 +12,8 @@ class Index extends Controller
     function index()
     {
 
-       // $this->model('index');
-     echo $this->model->test();
-
-       // $this->view('index/index');
+       $slider1 = $this->model->getSlider1();
+       $this->view('index/index',$slider1);
 
     }
 

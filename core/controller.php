@@ -7,7 +7,7 @@ class Controller
 
     }
 
-    function view($viewUrl)
+    function view($viewUrl,$data=[])
     {
 
         require('header.php');
