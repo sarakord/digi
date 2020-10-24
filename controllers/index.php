@@ -12,8 +12,10 @@ class Index extends Controller
     function index()
     {
 
+       // $this->model('index');
+     echo $this->model->test();
 
-        $this->view('index/index');
+       // $this->view('index/index');
 
     }
 

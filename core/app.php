@@ -27,6 +27,7 @@ class App
         if (file_exists($controlerUrl)) {
             require($controlerUrl);
             $object = new $this->controler;
+            $object->model($this->controler);
 
             if (method_exists($object, $this->method)) {
                 $arr = array($object, $this->method);
