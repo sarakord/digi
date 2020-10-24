@@ -2,11 +2,15 @@
     <span id="prev"></span>
     <span id="next"></span>
     <div id="slider_img">
-        <?php foreach($data as $slider) { ?>
-            <a href="<?= $slider['link']; ?>" class="item">
-                <img src="<?= $slider['image']; ?>">
-            </a>
+
+        <?php
+            $slider1 = $data[0];
+            foreach($slider1 as $slider) { ?>
+                <a href="<?= $slider['link']; ?>" class="item">
+                    <img src="<?= $slider['image']; ?>">
+                </a>
         <?php } ?>
+
     </div>
     <div id="slider_navigator">
         <ul>
