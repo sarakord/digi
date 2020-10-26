@@ -15,7 +15,7 @@
                     {
                 ?>
                     <li>
-                        <a>
+                        <a href="<?= URL ?>/product/index/<?= $row['id']; ?>">
                             <img style="width:150px; margin-top:20px;" src="public/image/products/<?= $row['id']; ?>/product_220.jpg">
                             <img src="public/image/exclusive-blue.png">
                             <p class="yekan fontsm">

@@ -14,7 +14,7 @@
             foreach($slider2 as $slider){
         ?>
 
-            <a class="item">
+            <a class="item" href="<?= URL ?>/product/index/<?= $slider['id']; ?>">
                 <div class="slider2_content_right">
                     <p class="title">
                        تخفیف شگفت‌انگیز
@@ -54,7 +54,7 @@
             foreach($slider2 as $slider){
         ?>
             <li>
-                <a>
+                <a href="<?= URL ?>/product/index/<?= $slider['id']; ?>">
                 <?= $slider['title']; ?>
                 </a>
             </li>

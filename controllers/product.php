@@ -7,8 +7,14 @@ class product extends Controller
     {
     }
 
-    public function index()
+    public function index($id)
     {
-        $this->view('product/index');
+        $product = $this->model->productInfo($id);
+
+
+        $data = [$product];
+        $this->view('product/index',$data);
     }
+
+  
 }

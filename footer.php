@@ -1,16 +1,18 @@
-
+<?php 
+    $options = Model::getOption();
+?>
 <footer>
     <div id="footer_top">
         <div class="main">
 
-            <span class="yekan fontlg">
+            <span style="line-height:40px;" class="yekan fontlg">
  7 روز هفته ، 24 ساعته پاسخگوی شما هستیم.
             </span>
 
             <ul>
                 <li>
                     <a class="yekan">
-                        021-91989120
+                        <?= $options[0]['value'] ?>
                         <i  style= "background-position: -397px -420px;"></i>
                     </a>
                 </li>
@@ -25,7 +27,7 @@
 
                 <li style="margin-left: 10px;">
                     <a class="yekan">
-support@clicksite.ir
+                        <?= $options[1]['value'] ?>
                         <i style="background-position: -321px -420px;"></i>
                     </a>
                 </li>

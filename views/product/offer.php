@@ -1,9 +1,11 @@
 <div id="offer">
         <span id="discount">
             <span class="right">
-                <p class="number">46</p>
+                <p class="number">
+                    <?= $product['price_discount'] ?>
+                </p>
                 <p class="tuman">
-                هزار تومان
+                    تومان
                 </p>
             </span>
             <span class="left">

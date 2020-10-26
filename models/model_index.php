@@ -1,23 +1,17 @@
 <?php
 
-class model_index
+class model_index extends Model
 {
      function __construct()
     {
-        $servername = 'localhost';
-        $username = 'root';
-        $password = '';
-        $dbname = 'digi';
-        $attr = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
-
-        $this->conn = new PDO('mysql:host=' .$servername.';dbname='.$dbname,$username,$password,$attr);
+        parent::__construct();
     }
 
     function getSlider1()
     {
         
         $sql = "select * from tbl_slider1";
-        $stmt = $this->conn->prepare($sql);
+        $stmt = self::$conn->prepare($sql);
         $stmt->execute();
         $result = $stmt->fetchAll();
         return $result;
@@ -26,7 +20,7 @@ class model_index
     function getSlider2()
     {
         $sql = "select * from tbl_product where special=1";
-        $stmt = $this->conn->prepare($sql);
+        $stmt = self::$conn->prepare($sql);
         $stmt->execute();
         $result = $stmt->fetchAll();
 
@@ -34,7 +28,8 @@ class model_index
         {
             $discount = $row['discount'];
             $price = $row['price'];
-            $total_price = ((100-$discount)*$price)/100 ; 
+            $discount_calculate = $this->calculateDiscount($price , $discount) ; 
+            $total_price = $discount_calculate[1];
             $result[$key]['total_price'] = $total_price;
         }
 
@@ -42,7 +37,7 @@ class model_index
         $time_special = $first_row['time_special'];
 
         $sql = "select * from tbl_option where setting='special_time' and value>0";
-        $stmt = $this->conn->prepare($sql);
+        $stmt = self::$conn->prepare($sql);
         $stmt->execute();
         $result2 = $stmt->fetch();
         $duration_special = $result2['value'];
@@ -57,7 +52,7 @@ class model_index
     function only_digikala()
     {
         $sql = "select * from tbl_product where only_digikala=1";
-        $stmt = $this->conn->prepare($sql);
+        $stmt = self::$conn->prepare($sql);
         $stmt->execute();
         $result = $stmt->fetchAll();
 
@@ -67,14 +62,14 @@ class model_index
     function most_viewed()
     {
         $sql = "select * from tbl_option where setting = 'limit_slider'";
-        $stmt = $this->conn->prepare($sql);
+        $stmt = self::$conn->prepare($sql);
         $stmt->execute();
         $result = $stmt->fetch();
         $limit = $result['value'];
 
 
         $sql = "select * from tbl_product order by viewed desc limit $limit";
-        $stmt = $this->conn->prepare($sql);
+        $stmt = self::$conn->prepare($sql);
         $stmt->execute();
         $result = $stmt->fetchAll();
 
@@ -84,14 +79,14 @@ class model_index
     function last_product()
     {
         $sql = "select * from tbl_option where setting = 'limit_slider'";
-        $stmt = $this->conn->prepare($sql);
+        $stmt = self::$conn->prepare($sql);
         $stmt->execute();
         $result = $stmt->fetch();
         $limit = $result['value'];
 
 
         $sql = "select * from tbl_product order by id desc limit $limit";
-        $stmt = $this->conn->prepare($sql);
+        $stmt = self::$conn->prepare($sql);
         $stmt->execute();
         $result = $stmt->fetchAll();
 

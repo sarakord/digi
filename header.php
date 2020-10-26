@@ -19,11 +19,11 @@
         <div id="header_right">
             <div id="header_right_top">
                 <span id="header_right_top_lockImg"></span>
-                <a class="yekan header_right_top_a " href="/login">
+                <a class="yekan header_right_top_a " href="<?= URL ?>login">
                     فروشگاه اینترنتی دیجی کالا ، وارد شوید
                 </a>
                 <span id="header_right_top_singupImg"></span>
-                <a class="yekan header_right_top_a" href="/register">
+                <a class="yekan header_right_top_a" href="<?= URL ?>register">
                     ثبت نام کنید
                 </a>
             </div>
