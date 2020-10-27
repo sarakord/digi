@@ -8,78 +8,24 @@
         </div>
         <div class="sliderscroll_main">
             <ul>
+                <?php
+                    $resualt = $data[1];
+                    foreach($resualt as $row)
+                    {
+                ?>
                 <li>
                     <a>
-                        <img src="public/image/sliderscroll_1.jpg">
+                        <img style="width:150px; margin-top: 20px;" src="public/image/products/<?= $row['id'] ?>/product_220.jpg">
                         <img src="public/image/exclusive-blue.png">
                         <p class="yekan fontsm">
-                            لپ تاپ لنوو
+                            <?= $row['title']; ?>
                         </p>
                         <p class="yekan price">
-                            2,270,000
+                            <?= $row['price']; ?>
                         </p>
                     </a>
                 </li>
-                <li>
-                    <a>
-                        <img src="public/image/scrollslider_2.jpg">
-                        <img src="public/image/exclusive-blue.png">
-                        <p class="yekan fontsm">
-                            گوشی هوآوی
-                        </p>
-                        <p class="yekan price">
-                            980,000
-                        </p>
-                    </a>
-                </li>
-                <li>
-                    <a>
-                        <img src="public/image/scrollslider_3.jpg">
-                        <img src="public/image/exclusive-blue.png">
-                        <p class="yekan fontsm">
-                            لپ تاپ acer
-                        </p>
-                        <p class="yekan price">
-                            2,123,000
-                        </p>
-                    </a>
-                </li>
-                <li>
-                    <a>
-                        <img src="public/image/scrollslider_4.jpg">
-                        <img src="public/image/exclusive-blue.png">
-                        <p class="yekan fontsm">
-                            لپ تاپ sony
-                        </p>
-                        <p class="yekan price">
-                            3,599,000
-                        </p>
-                    </a>
-                </li>
-                <li>
-                    <a>
-                        <img src="public/image/scrollslider_5.jpg">
-                        <img src="public/image/exclusive-blue.png">
-                        <p class="yekan fontsm">
-                            مودم همراه 3G
-                        </p>
-                        <p class="yekan price">
-                            253,000
-                        </p>
-                    </a>
-                </li>
-                <li>
-                    <a>
-                        <img src="public/image/scrollslider_2.jpg">
-                        <img src="public/image/exclusive-blue.png">
-                        <p class="yekan fontsm">
-                            گوشی هوآوی
-                        </p>
-                        <p class="yekan price">
-                            980,000
-                        </p>
-                    </a>
-                </li>
+                <?php } ?>
             </ul>
         </div>
         <div class="sliderscroll_next">

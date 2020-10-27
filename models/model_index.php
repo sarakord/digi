@@ -11,18 +11,14 @@ class model_index extends Model
     {
         
         $sql = "select * from tbl_slider1";
-        $stmt = self::$conn->prepare($sql);
-        $stmt->execute();
-        $result = $stmt->fetchAll();
+        $result = $this->doSelect($sql);
         return $result;
     }
 
     function getSlider2()
     {
         $sql = "select * from tbl_product where special=1";
-        $stmt = self::$conn->prepare($sql);
-        $stmt->execute();
-        $result = $stmt->fetchAll();
+        $result = $this->doSelect($sql);
 
         foreach($result as $key => $row)
         {
@@ -36,59 +32,42 @@ class model_index extends Model
         $first_row = $result[0];
         $time_special = $first_row['time_special'];
 
-        $sql = "select * from tbl_option where setting='special_time' and value>0";
-        $stmt = self::$conn->prepare($sql);
-        $stmt->execute();
-        $result2 = $stmt->fetch();
-        $duration_special = $result2['value'];
+        $options = self::getOption();
+        $duration_special = $options['special_time'];
 
         $time_end = $time_special + $duration_special;
         date_default_timezone_set('Asia/Tehran');
-        $data = date('F d,Y H:i:s',$time_end);
+        $date = date('F d,Y H:i:s',$time_end);
 
-        return [$result , $data];
+        return [$result , $date];
     }
 
     function only_digikala()
     {
         $sql = "select * from tbl_product where only_digikala=1";
-        $stmt = self::$conn->prepare($sql);
-        $stmt->execute();
-        $result = $stmt->fetchAll();
+        $result = $this->doSelect($sql);
 
         return $result;
     }
 
     function most_viewed()
     {
-        $sql = "select * from tbl_option where setting = 'limit_slider'";
-        $stmt = self::$conn->prepare($sql);
-        $stmt->execute();
-        $result = $stmt->fetch();
-        $limit = $result['value'];
-
+        $options = $this->getOption();
+        $limit = $options['limit_slider'];
 
         $sql = "select * from tbl_product order by viewed desc limit $limit";
-        $stmt = self::$conn->prepare($sql);
-        $stmt->execute();
-        $result = $stmt->fetchAll();
+        $result = $this->doSelect($sql,[],1);
 
         return $result;
     }
 
     function last_product()
     {
-        $sql = "select * from tbl_option where setting = 'limit_slider'";
-        $stmt = self::$conn->prepare($sql);
-        $stmt->execute();
-        $result = $stmt->fetch();
-        $limit = $result['value'];
-
+        $options = $this->getOption();
+        $limit = $options['limit_slider'];
 
         $sql = "select * from tbl_product order by id desc limit $limit";
-        $stmt = self::$conn->prepare($sql);
-        $stmt->execute();
-        $result = $stmt->fetchAll();
+        $result = $this->doSelect($sql);
 
         return $result;
     }

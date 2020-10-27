@@ -18,10 +18,17 @@ class Model
 
     public static function getOption()
     {
-        $sql = "select value from tbl_option where setting = 'tel' or setting = 'email'"; 
+        $sql = "select * from tbl_option "; 
         $stmt = self::$conn->prepare($sql);
         $stmt->execute();
-        $options = $stmt->fetchAll();
+        $result = $stmt->fetchAll();
+        $options = [];
+        foreach($result as $item)
+        {
+            $setting = $item['setting'];
+            $value = $item['value'];
+            $options[$setting] = $value;
+        }
 
         return $options;
     }
@@ -33,6 +40,25 @@ class Model
 
         return [$price_discount , $total_price];
     }
+
+    public function doSelect($sql , $values = [] , $fetch = '' , $fetchStyle = PDO::FETCH_ASSOC)
+    {
+        $stmt = self::$conn->prepare($sql);
+        foreach($values as $key=>$value)
+        {
+            $stmt->bindValue($key+1 , $value);
+        }
+        $stmt->execute();
+        if( $fetch == '' )
+        {
+            $result = $stmt->fetchAll($fetchStyle);
+        }else{
+            $result = $stmt->fetch($fetchStyle);
+        }
+        
+        return $result;
+    }
+
 }
 
 ?>

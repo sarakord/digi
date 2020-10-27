@@ -6,8 +6,8 @@
             <i class="addtofavorite"></i>
         </div>
         <div class="gallery">
-            <img id="zoomproduct" src="public/image/products/medium/product5.jpg"
-                 data-zoom-image="public/image/products/large/product5.jpg">
+            <img id="zoomproduct" src="public/image/products/<?= $product['id']; ?>/product_350.jpg"
+                 data-zoom-image="public/image/products/<?= $product['id']; ?>/product_zoom.jpg">
             <ul>
                 <li data-main-image="public/image/products/gallery/main/gallery2.jpg"><img
                         src="public/image/product5_1.jpg"></li>
@@ -25,7 +25,7 @@
     </div>
     <div class="left">
         <div class="title">
-            گوشی موبایل لنوو مدل VIBE Shot دو سیم‌ کارت ظرفیت 32 گیگابایت
+            <?= $product['title']; ?>
             <div class="stars">
                 <div class="gray ">
                     <div class="red"></div>
@@ -40,25 +40,36 @@
                 انتخاب رنگ
             </h4>
             <ul class="colors">
+                <?php 
+                    $all_colors = $product['all_colors'];
+                    foreach($all_colors as $all_color)
+                    {
+                ?>
                 <li>
-                    <span class="circle" style="background-color: black;"></span>
-                    مشکی
+                    <span class="circle" style="background-color: <?= $all_color['hex']; ?>;"></span>
+                    <?= $all_color['title']; ?>
                 </li>
-                <li>
-                    <span class="circle" style="background-color: white;"></span>
-                    سفید
-                </li>
+                <?php
+                    } 
+                ?>
             </ul>
             <h4>
                 انتخاب گارانتی
             </h4>
             <div id="selectlist">
                     <span class="zemanattitle">
-                    18 ماه گارانتی هماتلکام
+                        انتخاب کنید
                     </span>
                 <ul>
-                    <li>گارانتی شماره ۱</li>
-                    <li>گارانتی شماره 2</li>
+                    <?php 
+                        $all_guarantees = $product['all_guarantees'];
+                        foreach($all_guarantees as $all_guarantee)
+                        {
+                    ?>
+                    <li data-id="<?= $all_guarantee['id']; ?>"><?= $all_guarantee['title']; ?></li>
+                    <?php
+                        }
+                    ?>
                 </ul>
             </div>
             <div id="price">
@@ -66,7 +77,7 @@
                         قیمت :
                     </span>
                 <p>
-                    1،450،000
+                    <?= $product['price']; ?>
                 </p>
                 <span>
                         تومان
@@ -76,7 +87,8 @@
                             تخفیف
                         </span>
                         <span class="discount_left">
-                        250 هزار تومان
+                            <?= $product['price_discount']; ?>
+                            تومان
                         </span>
                     </span>
             </div>
@@ -84,13 +96,13 @@
                 <span class="priceforyou_img"></span>
                 <span>
                         قیمت برای شما :
-                    </span>
-                <p>
-                    1،200،000
+                </span>
+                <p style="text-decoration:none;">
+                    <?= $product['total_price']; ?>
                 </p>
                 <span style="font-size: 10pt !important;">
                         تومان
-                    </span>
+                </span>
             </div>
             <div id="compare">
                     <span class="yekan compare-btn">

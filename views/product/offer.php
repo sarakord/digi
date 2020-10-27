@@ -2,7 +2,7 @@
         <span id="discount">
             <span class="right">
                 <p class="number">
-                    <?= $product['price_discount'] ?>
+                    <?= $product['price_discount']; ?>
                 </p>
                 <p class="tuman">
                     تومان
@@ -25,7 +25,7 @@
     /*flip Timer*/
     $('.flipTimer').flipTimer({
         direction: 'down',
-        date: 'Des 08 , 2019 , 17:01:10',
+        date: '<?= $product['date_special']; ?>',
         callback: function () {
             $('.slider2_content_right').css('opacity', .4);
             $('.slider2_content_left').css('opacity', .4);

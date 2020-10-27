@@ -12,7 +12,7 @@
             <ul>
                 <li>
                     <a class="yekan">
-                        <?= $options[0]['value'] ?>
+                        <?= $options['tel'] ?>
                         <i  style= "background-position: -397px -420px;"></i>
                     </a>
                 </li>
@@ -27,7 +27,7 @@
 
                 <li style="margin-left: 10px;">
                     <a class="yekan">
-                        <?= $options[1]['value'] ?>
+                        <?= $options['email'] ?>
                         <i style="background-position: -321px -420px;"></i>
                     </a>
                 </li>

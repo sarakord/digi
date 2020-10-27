@@ -1,9 +1,6 @@
 @font-face {
     font-family: "yekan";
-    src: url('../font/BYekan.ttf') format('truetype'),
-    url('../font/BYekan.eot?#iefix') format('embedded-opentype'),
-    url('../font/BYekan.woff') format('woff');
-
+    src: url('../font/BYekan.ttf') format('truetype'), url('../font/BYekan.eot?#iefix') format('embedded-opentype'), url('../font/BYekan.woff') format('woff');
 }
 
 body {
@@ -15,7 +12,11 @@ a {
     cursor: pointer;
 }
 
-li, ul, div, span, p {
+li,
+ul,
+div,
+span,
+p {
     text-align: right;
     direction: rtl;
 }
@@ -78,7 +79,7 @@ a {
     background: #fff;
 }
 
-.header_right_top_a  {
+.header_right_top_a {
     float: right;
     margin-right: 10px;
     padding-top: 5px;
@@ -103,7 +104,6 @@ a {
 }
 
 #basket_top_left {
-
     width: 96px;
     height: 100%;
     background: #34a334;
@@ -113,7 +113,6 @@ a {
 }
 
 #basket_top_right_span {
-
     display: inline-block;
     height: 25px;
     width: 25px;
@@ -168,7 +167,6 @@ nav {
     box-shadow: 1px 3px 4px #ccc;
     -moz-box-shadow: 1px 3px 4px #ccc;
     -webkit-box-shadow: 1px 3px 4px #ccc;
-
 }
 
 li {
@@ -179,27 +177,25 @@ ul {
     margin: 0;
 }
 
-#menu_top > ul {
+#menu_top>ul {
     position: relative;
     padding: 0;
     z-index: 5;
 }
 
-#menu_top > ul > li {
+#menu_top>ul>li {
     float: right;
     height: 40px;
 }
 
-#menu_top > ul > li > a {
+#menu_top>ul>li>a {
     padding: 0px 26px;
     display: block;
     line-height: 36px;
     font-size: 13pt;
 }
 
-
-#menu_top > ul > li > ul {
-
+#menu_top>ul>li>ul {
     z-index: 5;
     position: absolute;
     right: 0;
@@ -211,11 +207,11 @@ ul {
     display: none;
 }
 
-#menu_top > ul > li > ul > li {
+#menu_top>ul>li>ul>li {
     float: right;
 }
 
-#menu_top > ul > li > ul > li > a {
+#menu_top>ul>li>ul>li>a {
     padding: 8px 18px;
     display: block;
 }
@@ -264,7 +260,7 @@ ul {
     box-shadow: 0 -1px 3px #eee;
 }
 
-.active-menu > a {
+.active-menu>a {
     color: red;
 }
 
@@ -374,7 +370,6 @@ ul {
 #digikala_tv li .play_icon {
     margin: auto;
     margin-top: 19px;
-
 }
 
 #sidebar_right_pic {
@@ -416,7 +411,7 @@ ul {
     line-height: 20px;
 }
 
-.col_right > img {
+.col_right>img {
     width: 70px;
     height: 70px;
 }
@@ -467,12 +462,10 @@ ul {
     box-shadow: 0 1px 4px #aaa;
     vertical-align: middle;
     line-height: 110px;
-
 }
 
 #brands_sidebar a img {
     width: 100%;
-
 }
 
 #brands_sidebar a :nth-child(even) {
@@ -559,13 +552,13 @@ ul {
     cursor: pointer;
 }
 
-#slider_navigator .active > a {
+#slider_navigator .active>a {
     background: #ffffff;
     color: #000000;
     position: relative;
 }
 
-#slider_navigator .active > a::after {
+#slider_navigator .active>a::after {
     content: " ";
     position: absolute;
     top: -13px;
@@ -665,6 +658,7 @@ ul {
     display: block;
     width: 100%;
     height: 100%;
+    color: black;
     text-align: center;
     line-height: 37px;
     cursor: pointer;
@@ -680,7 +674,6 @@ ul {
     width: 305px;
     height: 100%;
     float: left;
-
 }
 
 .slider2_content_left p {
@@ -724,7 +717,6 @@ ul {
     border-width: 8px 12px 8px 0;
     border-color: transparent #cccccc transparent transparent;
     z-index: 2;
-
 }
 
 .price_info_old::before {
@@ -736,11 +728,9 @@ ul {
     position: absolute;
     border-bottom: .5px solid #000000;
     transform: rotate(-21deg);
-
 }
 
 .price_info_new {
-
     width: 155px;
     height: 100%;
     background: red;
@@ -762,7 +752,6 @@ ul {
     border-style: solid;
     border-width: 8px 12px 8px 0;
     border-color: transparent #ffffff transparent transparent;
-
 }
 
 .slider2_content_right_p {
@@ -778,7 +767,8 @@ ul {
     transform: scale(.3);
 }
 
-.flipTimer, .flipTimer div {
+.flipTimer,
+.flipTimer div {
     direction: ltr !important;
 }
 
@@ -800,7 +790,7 @@ ul {
 
 #slider2_navigator .active {
     background: #ff252e;
-    color: #ffffff;
+    color: #ffffff !important;
     position: relative;
 }
 
@@ -884,13 +874,11 @@ ul {
 }
 
 .sliderscroll .sliderscroll_main ul {
-
     padding: 0;
     height: 100%;
 }
 
 .sliderscroll .sliderscroll_main ul li {
-
     padding: 0;
     width: 195px;
     height: 100%;
@@ -898,7 +886,6 @@ ul {
 }
 
 .sliderscroll .sliderscroll_main ul li a {
-
     display: block;
     height: 100%;
     text-align: center;
@@ -981,74 +968,73 @@ footer .main {
     line-height: 42px;
 }
 
-#footer_bottom .right , .center{
+#footer_bottom .right,
+.center {
     width: 220px;
     height: 100%;
     float: right;
 }
 
-#footer_bottom .left{
+#footer_bottom .left {
     width: 590px;
     height: 100%;
     float: left;
 }
 
-#footer_bottom ul li{
+#footer_bottom ul li {
     font-family: yekan;
     font-size: 10pt;
     line-height: 48px;
 }
 
-#footer_bottom .title{
+#footer_bottom .title {
     font-size: 13pt;
 }
- .right ul{
-     padding-right: 0;
- }
 
- .email input{
-     width: 430px;
-     height: 35px;
-     font-family: yekan;
-     border: 1px solid #eee
+.right ul {
+    padding-right: 0;
+}
 
- }
+.email input {
+    width: 430px;
+    height: 35px;
+    font-family: yekan;
+    border: 1px solid #eee
+}
 
- .btn{
-     width: 110px;
-     height: 33px;
-     background: #208de6;
-     display: block;
-     float: left;
-     margin-left: 19px;
-     margin-top: 3px;
-     box-shadow: 0px 2px 3px rgba(0,0,0,.2);
-     color: #FFFFFF;
-     text-align: center;
-     font-family: yekan;
-     line-height: 30px;
-     font-size: 10pt;
-     cursor: pointer;
- }
+.btn {
+    width: 110px;
+    height: 33px;
+    background: #208de6;
+    display: block;
+    float: left;
+    margin-left: 19px;
+    margin-top: 3px;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, .2);
+    color: #FFFFFF;
+    text-align: center;
+    font-family: yekan;
+    line-height: 30px;
+    font-size: 10pt;
+    cursor: pointer;
+}
 
- .social{
-     float: left;
-     margin-top: 45px;
-     width: 100%;
+.social {
+    float: left;
+    margin-top: 45px;
+    width: 100%;
+}
 
- }
+.social img {
+    float: left;
+    margin-left: 4px;
+}
 
- .social img{
-     float: left;
-     margin-left: 4px;
- }
-
- .social_button{
-     width: 28px;
-     height: 28px;
-     display: block;
-     float: right;
-     background: url("../image/slices.png");
-     margin-right: 4px;
- }
-
+.social_button {
+    width: 28px;
+    height: 28px;
+    display: block;
+    float: right;
+    background: url("../image/slices.png");
+    margin-right: 4px;
+}
